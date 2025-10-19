@@ -1,54 +1,75 @@
-/* Reset / dasar */
+/* RESET / DASAR */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #222;
+  background-color: #fafafa;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #fff;
+  padding: 1rem 3rem;
+  background: linear-gradient(90deg, #ffffff, #f8f8f8);
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s ease;
+}
+
+.navbar:hover {
+  background: linear-gradient(90deg, #f0f0f0, #fff);
 }
 
 .navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 1px;
 }
 
 .navbar .nav-links a {
   margin-left: 1.5rem;
   text-decoration: none;
-  color: #333;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #007bff;
+  transform: scale(1.05);
 }
 
 .menu-toggle {
-  display: none; /* muncul di mobile nanti */
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
 }
 
-/* Sidebar untuk mobile */
+/* SIDEBAR MOBILE */
 .sidebar {
   position: fixed;
   left: -100%;
   top: 0;
   width: 250px;
   height: 100%;
-  background-color: #f8f8f8;
+  background-color: #fff;
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.1);
   transition: left 0.3s ease;
-  z-index: 9;
+  z-index: 999;
 }
 
 .sidebar.active {
@@ -60,44 +81,102 @@ body {
   padding: 1rem 2rem;
   text-decoration: none;
   color: #333;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s ease;
 }
 
-/* Hero Section */
+.sidebar nav a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* HERO SECTION */
 .hero {
   display: flex;
   align-items: center;
-  padding: 6rem 2rem 2rem; /* memberi ruang karena navbar fixed */
+  justify-content: space-between;
+  padding: 7rem 3rem 3rem;
+  background: linear-gradient(120deg, #f0f4ff, #fafafa);
+  min-height: 100vh;
 }
 
 .hero-content {
   flex: 1;
+  padding-right: 2rem;
 }
 
-.hero-image {
-  flex: 1;
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content .btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-content .btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
 }
 
 .hero-image img {
   width: 100%;
-  height: auto;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* About Section */
+/* ABOUT SECTION */
 .about {
-  padding: 4rem 2rem;
+  padding: 4rem 3rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  background-color: #fff;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  color: #555;
+  font-size: 1rem;
 }
 
 .about img {
-  width: 50%;
-  margin-left: 2rem;
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Menu Section */
+/* MENU SECTION */
 .menu {
-  padding: 4rem 2rem;
-  background-color: #f4f4f4;
+  padding: 4rem 3rem;
+  background-color: #f7f8fa;
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
 }
 
 .menu-items {
@@ -108,18 +187,48 @@ body {
 
 .menu-item {
   background-color: #fff;
-  padding: 2rem;
-  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-8px);
 }
 
 .menu-item img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
 }
 
-/* Contact Section */
+.menu-item h3 {
+  margin: 1rem 0;
+  color: #333;
+}
+
+.menu-item p {
+  color: #555;
+  font-size: 0.95rem;
+  padding: 0 1rem 1.5rem;
+}
+
+/* CONTACT SECTION */
 .contact {
-  padding: 4rem 2rem;
+  padding: 4rem 3rem;
+  background-color: #fff;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
 }
 
 .contact-form input,
@@ -128,46 +237,61 @@ body {
   padding: 1rem;
   margin-bottom: 1rem;
   border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
 }
 
 .contact-form button {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #333;
+  background-color: #007bff;
   color: #fff;
   border: none;
+  border-radius: 30px;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Footer */
+.contact-form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* FOOTER */
 .footer {
   text-align: center;
   padding: 2rem;
   background-color: #222;
   color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
-/* Media Queries (Responsif) */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
+    text-align: center;
   }
-  
+
   .about {
     flex-direction: column;
   }
-  
+
   .about img {
     width: 100%;
-    margin-left: 0;
     margin-top: 2rem;
   }
 
   .menu-toggle {
     display: block;
   }
-  
+
   .nav-links {
     display: none;
+  }
+
+  .hero-content {
+    padding-right: 0;
   }
 }
