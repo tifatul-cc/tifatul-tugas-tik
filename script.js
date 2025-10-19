@@ -6,7 +6,9 @@ themeToggle.addEventListener('click', () => {
 });
 
 // === ANIMASI SCROLL ===
-const animatedElements = document.querySelectorAll('.hero-content, .hero-image, .about-content, .about, .menu-item');
+const animatedElements = document.querySelectorAll(
+  '.hero-content, .hero-image, .about-content, .about, .menu-item'
+);
 
 function showOnScroll() {
   const triggerBottom = window.innerHeight * 0.85;
