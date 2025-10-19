@@ -1,4 +1,4 @@
-/* RESET / DASAR */
+/* === RESET & DASAR === */
 * {
   margin: 0;
   padding: 0;
@@ -11,9 +11,10 @@ body {
   line-height: 1.6;
   color: #222;
   background-color: #fafafa;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
-/* NAVBAR */
+/* === NAVBAR === */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -25,18 +26,13 @@ body {
   top: 0;
   z-index: 1000;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-  transition: background 0.3s ease;
-}
-
-.navbar:hover {
-  background: linear-gradient(90deg, #f0f0f0, #fff);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .navbar .logo {
   font-size: 1.8rem;
   font-weight: 700;
   color: #333;
-  letter-spacing: 1px;
 }
 
 .navbar .nav-links a {
@@ -59,7 +55,18 @@ body {
   color: #333;
 }
 
-/* SIDEBAR MOBILE */
+.theme-toggle {
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* === SIDEBAR === */
 .sidebar {
   position: fixed;
   left: -100%;
@@ -91,7 +98,7 @@ body {
   color: #fff;
 }
 
-/* HERO SECTION */
+/* === HERO SECTION === */
 .hero {
   display: flex;
   align-items: center;
@@ -99,15 +106,24 @@ body {
   padding: 7rem 3rem 3rem;
   background: linear-gradient(120deg, #f0f4ff, #fafafa);
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .hero-content {
   flex: 1;
   padding-right: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.hero-content.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #222;
   margin-bottom: 1rem;
 }
@@ -138,9 +154,17 @@ body {
   max-width: 500px;
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 1s ease;
 }
 
-/* ABOUT SECTION */
+.hero-image.visible img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* === ABOUT SECTION === */
 .about {
   padding: 4rem 3rem;
   display: flex;
@@ -150,6 +174,18 @@ body {
   background-color: #fff;
 }
 
+.about-content {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease;
+}
+
+.about-content.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .about-content h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -157,16 +193,23 @@ body {
 
 .about-content p {
   color: #555;
-  font-size: 1rem;
 }
 
 .about img {
   width: 45%;
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateX(50px);
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 
-/* MENU SECTION */
+.about.visible img {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* === MENU SECTION === */
 .menu {
   padding: 4rem 3rem;
   background-color: #f7f8fa;
@@ -190,11 +233,19 @@ body {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.menu-item.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .menu-item:hover {
   transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .menu-item img {
@@ -214,7 +265,7 @@ body {
   padding: 0 1rem 1.5rem;
 }
 
-/* CONTACT SECTION */
+/* === CONTACT === */
 .contact {
   padding: 4rem 3rem;
   background-color: #fff;
@@ -257,7 +308,7 @@ body {
   transform: scale(1.05);
 }
 
-/* FOOTER */
+/* === FOOTER === */
 .footer {
   text-align: center;
   padding: 2rem;
@@ -267,7 +318,31 @@ body {
   letter-spacing: 1px;
 }
 
-/* RESPONSIVE */
+/* === DARK MODE === */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark .navbar {
+  background: linear-gradient(90deg, #1a1a1a, #111);
+}
+
+body.dark .menu-item {
+  background-color: #1f1f1f;
+}
+
+body.dark .footer {
+  background-color: #000;
+}
+
+body.dark .contact,
+body.dark .about {
+  background-color: #1a1a1a;
+  color: #eee;
+}
+
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
