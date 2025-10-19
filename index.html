@@ -1,86 +1,95 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kedai Kopi “Nama”</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Animasi & Dark Mode</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
-    <a href="#" class="logo">NamaKedai</a>
+    <div class="logo">MyWeb</div>
     <nav class="nav-links">
+      <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#menu">Menu</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="menu-toggle">☰</button>
+    <div class="menu-toggle">☰</div>
+    <div class="theme-toggle">☀️</div>
   </header>
 
   <!-- Sidebar (untuk mobile) -->
-  <aside class="sidebar">
+  <div class="sidebar">
     <nav>
+      <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#menu">Menu</a>
       <a href="#contact">Contact</a>
     </nav>
-  </aside>
+  </div>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="hero-content">
-      <h1>Selamat Datang di Kedai Kopi “Nama”</h1>
-      <p>Tagline atau deskripsi singkat.</p>
-      <button class="btn">Lihat Menu</button>
+      <h1>Selamat Datang di Website Modern</h1>
+      <p>Website ini memiliki tampilan modern, efek animasi scroll, dan dark mode yang interaktif.</p>
+      <a href="#menu" class="btn">Lihat Selengkapnya</a>
     </div>
     <div class="hero-image">
-      <img src="path/to/hero-image.jpg" alt="Kedai Kopi">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" alt="Hero Image">
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="about">
-    <h2>Tentang Kami</h2>
-    <p>Deskripsi singkat mengenai kedai kopi, visi misi, suasana, dsb.</p>
-    <img src="path/to/about-image.jpg" alt="Suasana Kedai">
+  <section class="about" id="about">
+    <div class="about-content">
+      <h2>Tentang Kami</h2>
+      <p>
+        Kami membuat desain website yang responsif, interaktif, dan elegan agar pengalaman pengguna semakin menarik.
+      </p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="About Image">
   </section>
 
   <!-- Menu Section -->
-  <section id="menu" class="menu">
-    <h2>Menu Kami</h2>
+  <section class="menu" id="menu">
+    <h2>Menu & Layanan</h2>
     <div class="menu-items">
-      <!-- contoh satu item -->
       <div class="menu-item">
-        <img src="path/to/item1.jpg" alt="Nama minuman">
-        <h3>Nama Minuman</h3>
-        <p>Deskripsi singkat.</p>
-        <span class="price">Rp XX.XXX</span>
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800" alt="Item 1">
+        <h3>Desain Website</h3>
+        <p>Tampilan profesional dengan animasi dan fitur dark mode.</p>
       </div>
-      <!-- ulang untuk item lainnya -->
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" alt="Item 2">
+        <h3>Frontend Development</h3>
+        <p>Kode bersih dan responsif untuk semua ukuran layar.</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?w=800" alt="Item 3">
+        <h3>UI/UX Design</h3>
+        <p>Pengalaman pengguna yang halus dan intuitif.</p>
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact">
+  <section class="contact" id="contact">
     <h2>Hubungi Kami</h2>
     <form class="contact-form">
-      <input type="text" placeholder="Nama Anda" required>
-      <input type="email" placeholder="Email Anda" required>
-      <textarea placeholder="Pesan Anda" required></textarea>
-      <button type="submit" class="btn">Kirim</button>
+      <input type="text" placeholder="Nama Anda" required />
+      <input type="email" placeholder="Email Anda" required />
+      <textarea rows="5" placeholder="Pesan Anda..." required></textarea>
+      <button type="submit">Kirim</button>
     </form>
-    <div class="contact-info">
-      <p>Alamat: …</p>
-      <p>Telepon: …</p>
-      <p>Media Sosial: …</p>
-    </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 NamaKedai. Semua hak cipta dilindungi.</p>
+    <p>&copy; 2025 MyWeb. Semua Hak Dilindungi.</p>
   </footer>
 
   <script src="script.js"></script>
