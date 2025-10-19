@@ -1,24 +1,22 @@
-// Toggle sidebar / menu mobile
-const menuToggle = document.querySelector('.menu-toggle');
-const sidebar = document.querySelector('.sidebar');
-
-menuToggle.addEventListener('click', () => {
-  sidebar.classList.toggle('active');
+// === DARK MODE TOGGLE ===
+const themeToggle = document.querySelector('.theme-toggle');
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  themeToggle.textContent = document.body.classList.contains('dark') ? '🌙' : '☀️';
 });
 
-// Smooth scroll ke section ketika klik link navbar
-document.querySelectorAll('.nav-links a, .sidebar nav a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href').substring(1);
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      window.scrollTo({
-        top: targetSection.offsetTop - 60,  // 60 untuk offset navbar
-        behavior: 'smooth'
-      });
+// === ANIMASI SCROLL ===
+const animatedElements = document.querySelectorAll('.hero-content, .hero-image, .about-content, .about, .menu-item');
+
+function showOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+  animatedElements.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
+    if (boxTop < triggerBottom) {
+      el.classList.add('visible');
     }
-    // tutup sidebar kalau mobile
-    sidebar.classList.remove('active');
   });
-});
+}
+
+window.addEventListener('scroll', showOnScroll);
+window.addEventListener('load', showOnScroll);
