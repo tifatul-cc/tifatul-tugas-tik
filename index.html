@@ -1,68 +1,60 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kedai Kopi Modern</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Haven | Kedai Kopi Modern</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">☕ KedaiKita</div>
+    <div class="logo">☕ Coffee Haven</div>
     <nav class="nav-links">
       <a href="#home">Home</a>
       <a href="#menu">Menu</a>
       <a href="#order">Pesan</a>
-      <a href="#contact">Kontak</a>
+      <a href="#about">Tentang</a>
     </nav>
-    <div class="theme-toggle">🌙</div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Temukan Aroma dan Rasa Kopi Terbaik</h1>
-      <p>Rasakan kenikmatan kopi pilihan yang diseduh dengan cinta dan disajikan dengan suasana modern yang hangat.</p>
+    <div class="hero-text">
+      <h1>Great Coffee For Some Joy</h1>
+      <p>Nikmati secangkir kebahagiaan dengan aroma kopi terbaik dari kami.</p>
       <a href="#menu" class="btn">Lihat Menu</a>
     </div>
-    <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" alt="Coffee Cup">
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200" alt="Coffee Shop">
     </div>
   </section>
 
   <!-- Menu Section -->
   <section class="menu" id="menu">
-    <h2>Menu Kami</h2>
+    <h2>Our Speciality</h2>
     <div class="menu-items">
-
-      <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800" alt="Espresso">
-        <h3>Espresso</h3>
-        <p>Kopi hitam pekat dengan cita rasa khas Italia.</p>
-        <span class="price">Rp 18.000</span>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?w=800" alt="Espresso">
+        <h3>Espresso Coffee</h3>
+        <p>Kopi pekat dengan cita rasa kuat dan aroma khas.</p>
+        <span class="price">Rp 25.000</span>
+        <button class="order-btn">Pesan</button>
       </div>
-
-      <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" alt="Cappuccino">
-        <h3>Cappuccino</h3>
-        <p>Kombinasi espresso, susu panas, dan busa lembut.</p>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800" alt="Americano">
+        <h3>Americano Coffee</h3>
+        <p>Kopi hitam lembut untuk kenikmatan santai setiap hari.</p>
         <span class="price">Rp 22.000</span>
+        <button class="order-btn">Pesan</button>
       </div>
-
-      <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800" alt="Latte">
-        <h3>Caffè Latte</h3>
-        <p>Kopi susu dengan rasa lembut dan creamy.</p>
-        <span class="price">Rp 20.000</span>
-      </div>
-
-      <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" alt="Mocha">
-        <h3>Mocha</h3>
-        <p>Campuran espresso, coklat, dan susu manis.</p>
-        <span class="price">Rp 24.000</span>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Perpaduan espresso, susu, dan foam yang sempurna.</p>
+        <span class="price">Rp 30.000</span>
+        <button class="order-btn">Pesan</button>
       </div>
     </div>
   </section>
@@ -71,32 +63,32 @@
   <section class="order" id="order">
     <h2>Pesan Sekarang</h2>
     <form class="order-form">
-      <input type="text" placeholder="Nama Lengkap" required />
-      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Nama Anda" required>
+      <input type="email" placeholder="Email" required>
       <select required>
         <option value="">Pilih Menu</option>
-        <option>Espresso - Rp 18.000</option>
-        <option>Cappuccino - Rp 22.000</option>
-        <option>Caffè Latte - Rp 20.000</option>
-        <option>Mocha - Rp 24.000</option>
+        <option>Espresso Coffee - Rp 25.000</option>
+        <option>Americano Coffee - Rp 22.000</option>
+        <option>Cappuccino - Rp 30.000</option>
       </select>
-      <input type="number" placeholder="Jumlah Pesanan" min="1" required />
-      <textarea rows="4" placeholder="Catatan Tambahan (opsional)"></textarea>
-      <button type="submit">Kirim Pesanan</button>
+      <input type="number" placeholder="Jumlah" min="1" required>
+      <textarea placeholder="Catatan Tambahan..."></textarea>
+      <button type="submit" class="btn">Kirim Pesanan</button>
     </form>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>Kontak Kami</h2>
-    <p>📍 Jalan Kopi No. 99, Jakarta</p>
-    <p>📞 0812-3456-7890</p>
-    <p>📧 hello@kedaikita.com</p>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>Tentang Kami</h2>
+    <p>
+      Coffee Haven adalah kedai kopi modern yang menyajikan berbagai pilihan kopi terbaik
+      dari biji kopi pilihan, diracik oleh barista profesional dengan cinta dan semangat.
+    </p>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 KedaiKita. Nikmati hari dengan secangkir kopi.</p>
+    <p>© 2025 Coffee Haven | Dibuat dengan ❤️ untuk para pecinta kopi</p>
   </footer>
 
   <script src="script.js"></script>
