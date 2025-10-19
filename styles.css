@@ -1,239 +1,229 @@
-/* === RESET === */
+/* ===== Reset dasar ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #fdfcfb;
-  color: #333;
-  transition: background 0.5s ease, color 0.5s ease;
+  background-color: #f8f4ef;
+  color: #3a2e27;
+  line-height: 1.6;
 }
 
-/* === NAVBAR === */
+/* ===== Navbar ===== */
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  z-index: 100;
-  backdrop-filter: blur(10px);
+  background-color: #3a2e27;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .logo {
   font-size: 1.5rem;
-  font-weight: 700;
-  color: #6b3e26;
+  font-weight: bold;
 }
 
 .nav-links a {
-  margin-left: 1.5rem;
+  color: #fff;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  margin-left: 1.5rem;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #a3612c;
+  color: #d3a57d;
 }
 
-.theme-toggle {
-  cursor: pointer;
-  font-size: 1.4rem;
-  margin-left: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.theme-toggle:hover {
-  transform: rotate(25deg);
-}
-
-/* === HERO === */
+/* ===== Hero Section ===== */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 7rem 3rem 3rem;
-  background: linear-gradient(120deg, #f8f4f0, #fff);
-  min-height: 100vh;
+  padding: 8rem 2rem 4rem;
+  background: linear-gradient(to right, #f8f4ef 60%, #3a2e27 40%);
 }
 
-.hero-content {
+.hero-text {
   flex: 1;
+  padding-right: 2rem;
 }
 
-.hero-content h1 {
-  font-size: 2.8rem;
-  color: #3c2a1e;
+.hero-text h1 {
+  font-size: 3rem;
+  color: #3a2e27;
   margin-bottom: 1rem;
 }
 
-.hero-content p {
-  color: #555;
-  margin-bottom: 1.5rem;
+.hero-text p {
+  color: #5c5048;
+  margin-bottom: 2rem;
+}
+
+.hero-img img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .btn {
-  display: inline-block;
-  padding: 0.8rem 1.8rem;
-  background-color: #6b3e26;
+  background-color: #d3a57d;
   color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
   border-radius: 30px;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #a3612c;
-  transform: scale(1.05);
+  background-color: #b8835d;
 }
 
-.hero-image img {
-  width: 100%;
-  max-width: 450px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-/* === MENU === */
+/* ===== Menu Section ===== */
 .menu {
-  padding: 5rem 3rem;
   text-align: center;
-  background-color: #fff;
+  padding: 5rem 2rem;
 }
 
 .menu h2 {
-  font-size: 2.2rem;
-  color: #3c2a1e;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
+  color: #3a2e27;
 }
 
 .menu-items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-.menu-item {
-  background-color: #fdfdfd;
+.menu-card {
+  background: #fff;
   border-radius: 15px;
+  overflow: hidden;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s;
 }
 
-.menu-item:hover {
+.menu-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.menu-item img {
+.menu-card img {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+  height: 220px;
+  object-fit: cover;
+}
+
+.menu-card h3 {
+  margin: 1rem 0 0.5rem;
+  color: #3a2e27;
+}
+
+.menu-card p {
+  font-size: 0.9rem;
+  padding: 0 1rem;
+  color: #5c5048;
 }
 
 .price {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #a3612c;
+  display: block;
   font-weight: bold;
+  color: #d3a57d;
+  margin: 1rem 0;
 }
 
-/* === ORDER === */
+.order-btn {
+  background-color: #3a2e27;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.order-btn:hover {
+  background-color: #d3a57d;
+}
+
+/* ===== Order Form ===== */
 .order {
-  padding: 5rem 3rem;
-  background-color: #f8f4f0;
+  background-color: #3a2e27;
+  color: #fff;
   text-align: center;
+  padding: 5rem 2rem;
 }
 
 .order h2 {
-  color: #3c2a1e;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 
 .order-form {
   max-width: 500px;
-  margin: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .order-form input,
 .order-form select,
 .order-form textarea {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
+  padding: 0.8rem;
   border-radius: 8px;
-  font-family: inherit;
+  border: none;
+  outline: none;
 }
 
 .order-form button {
-  padding: 1rem 2rem;
+  background-color: #d3a57d;
   border: none;
-  background-color: #6b3e26;
   color: #fff;
-  border-radius: 25px;
+  padding: 1rem;
+  border-radius: 30px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
 .order-form button:hover {
-  background-color: #a3612c;
+  background-color: #b8835d;
 }
 
-/* === CONTACT === */
-.contact {
-  padding: 3rem;
-  background-color: #fff;
+/* ===== About ===== */
+.about {
   text-align: center;
-  color: #3c2a1e;
+  padding: 5rem 2rem;
 }
 
-.contact h2 {
+.about h2 {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-/* === FOOTER === */
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #5c5048;
+}
+
+/* ===== Footer ===== */
 .footer {
+  background-color: #3a2e27;
+  color: #fff;
   text-align: center;
   padding: 2rem;
-  background-color: #3c2a1e;
-  color: #fff;
-}
-
-/* === DARK MODE === */
-body.dark {
-  background-color: #1e1b18;
-  color: #eee;
-}
-
-body.dark .navbar {
-  background-color: #2a2420;
-}
-
-body.dark .menu, 
-body.dark .contact {
-  background-color: #2a2420;
-}
-
-body.dark .order {
-  background-color: #1f1b18;
-}
-
-body.dark .menu-item {
-  background-color: #2f2722;
-}
-
-body.dark .footer {
-  background-color: #000;
+  font-size: 0.9rem;
 }
