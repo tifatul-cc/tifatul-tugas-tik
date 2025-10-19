@@ -1,21 +1,21 @@
-// === DARK MODE TOGGLE ===
+// Dark Mode Toggle
 const themeToggle = document.querySelector('.theme-toggle');
 themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark');
-  themeToggle.textContent = document.body.classList.contains('dark') ? '🌙' : '☀️';
+  themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
 });
 
-// === ANIMASI SCROLL ===
-const animatedElements = document.querySelectorAll(
-  '.hero-content, .hero-image, .about-content, .about, .menu-item'
-);
+// Scroll Animation (Simple)
+const elements = document.querySelectorAll('.menu-item, .hero-content, .hero-image');
 
 function showOnScroll() {
-  const triggerBottom = window.innerHeight * 0.85;
-  animatedElements.forEach(el => {
-    const boxTop = el.getBoundingClientRect().top;
-    if (boxTop < triggerBottom) {
-      el.classList.add('visible');
+  const trigger = window.innerHeight * 0.85;
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < trigger) {
+      el.style.opacity = 1;
+      el.style.transform = 'translateY(0)';
+      el.style.transition = 'all 1s ease';
     }
   });
 }
